@@ -49,8 +49,7 @@ Aurora-Fase7/
 │   ├── gerar_base.py            ← cria o banco e a base simulada
 │   ├── gerar_circuito.py        ← desenha o circuito_logico.png
 │   └── gerar_prints_execucao.py ← gera os prints reais da execução
-├── graficos_ou_imagens/         ← gráficos e prints_execucao/
-└── docs/PASSO_A_PASSO.md
+└── graficos_ou_imagens/         ← gráficos e prints_execucao/
 ```
 
 A `simulacao_computacional.py` fica na raiz, e não em `src/`, porque o enunciado pede esse nome de arquivo na entrega quando a simulação é separada do código principal.
