@@ -1,0 +1,50 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+--- REGISTRAR LEITURA DE SENSORES ---
+  Módulos: 1=Habitat Alpha, 2=MedBase, 3=Reator Solar, 4=BioLab, 5=LogiStore, 6=TerraBot, 7=Estufa Verde
+Informe o ID do módulo: Ciclo (hora da missão) [1]:   -> dia 1, 00h
+Consumo (kWh): Temperatura externa (°C, -150 a 50): Luminosidade (lux) [0]: Umidade interna (%) [40]: Carga da bateria (%) [33.6]: 
+  [OK] Leitura do ciclo 1 registrada para 'Estufa Verde'.
+
+Escolha uma opção: 
+--- CONSULTAR LEITURAS ---
+  1. Por módulo (com média móvel de 24 h)
+  2. Por dia (resumo da colônia, hora a hora)
+  3. Por ciclo (todos os módulos)
+Escolha:   Módulos: 1=Habitat Alpha, 2=MedBase, 3=Reator Solar, 4=BioLab, 5=LogiStore, 6=TerraBot, 7=Estufa Verde
+Informe o ID do módulo: Quantas leituras mais recentes exibir? [12]: 
+  Últimas 1 leituras de Estufa Verde:
+  Ciclo  Dia  Hora  Consumo  Média 24h  Geração  Temp °C  Lux  Bateria %
+  -----  ---  ----  -------  ---------  -------  -------  ---  ---------
+  1      1    00h   1.30     1.30       0.00     -60.0    0    33.6     
+
+  Consumo total: 1.3 kWh em 1 leituras | máximo 1.30 kWh/h
+
+Escolha uma opção: 
+--- ALTERAR MÓDULO ---  (Enter mantém o valor atual)
+  Módulos: 1=Habitat Alpha, 2=MedBase, 3=Reator Solar, 4=BioLab, 5=LogiStore, 6=TerraBot, 7=Estufa Verde
+Informe o ID do módulo: Nome [Estufa Verde]: Tipo:
+   1. habitacao
+   2. medico
+   3. energia
+   4. laboratorio
+   5. armazenagem
+   6. mineracao
+   7. agricultura (atual)
+   8. outro
+  Escolha o número (Enter mantém): Código do sensor [0x5B2C]: Prioridade 1-5 [3]: Status:
+   1. ativo (atual)
+   2. manutencao
+   3. alerta
+  Escolha o número (Enter mantém): Consumo base kWh/dia [28.5]: 
+  [OK] Módulo 7 atualizado.
+
+Escolha uma opção: 
+--- EXCLUIR MÓDULO ---
+  Módulos: 1=Habitat Alpha, 2=MedBase, 3=Reator Solar, 4=BioLab, 5=LogiStore, 6=TerraBot, 7=Estufa Verde
+Informe o ID do módulo:   Atenção: as 1 leituras, os alertas e as manutenções deste módulo também serão excluídos.
+  Confirma a exclusão de 'Estufa Verde'? (s/n): 
+  [OK] Módulo 'Estufa Verde' excluído.
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

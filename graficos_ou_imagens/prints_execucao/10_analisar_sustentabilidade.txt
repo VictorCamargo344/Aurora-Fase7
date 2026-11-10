@@ -1,0 +1,68 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+========================================================================
+ ANÁLISE DE SUSTENTABILIDADE DA COLÔNIA
+========================================================================
+
+[1] CONSULTA AO BANCO: 1008 leituras, 6 módulos, ciclos 1 a 168
+    Situação atual: dia 7, 23h | bateria 33.6%
+    Últimas 24 h: consumo 385.4 kWh | geração 418.5 kWh
+    Consumo médio móvel (24 h, deque) por módulo:
+      - Habitat Alpha    2.96 kWh/h
+      - MedBase          2.81 kWh/h
+      - Reator Solar     2.05 kWh/h
+      - BioLab           2.33 kWh/h
+      - LogiStore        2.18 kWh/h
+      - TerraBot         3.73 kWh/h
+
+[2] REGRA BOOLEANA no ciclo atual  (RISCO = A·¬G + E ; CORTE = RISCO·¬P)
+
+  Ciclo 168 (dia 7, 23h) | bateria 33.6% | geração 0.0 kWh x consumo 20.1 kWh
+  Módulo         Consumo  Esperado  A  G  E  P  RISCO  CORTE
+  -------------  -------  --------  -  -  -  -  -----  -----
+  Habitat Alpha  4.20     3.64      0  0  0  1  não    não  
+  MedBase        3.76     3.49      0  0  0  1  não    não  
+  Reator Solar   2.06     2.24      0  0  0  1  não    não  
+  BioLab         3.39     3.09      0  0  0  0  não    não  
+  LogiStore      2.51     2.72      0  0  0  0  não    não  
+  TerraBot       4.18     4.26      0  0  0  0  não    não  
+
+[3] FILA DE ALERTAS (heapq) - últimas 24 h: 50 alertas (crítico 0 | alto 48 | moderado 2)
+  #  Gravidade  Módulo         Prior.  Ciclo  Mensagem                                                                 
+  -  ---------  -------------  ------  -----  -------------------------------------------------------------------------
+  1  ALTO       Habitat Alpha  1       152    bateria em 0.0% e geração insuficiente (14.3 de 17.3 kWh) -> módulo es...
+  2  ALTO       Habitat Alpha  1       151    bateria em 0.0% e geração insuficiente (0.0 de 19.3 kWh) -> módulo ess...
+  3  ALTO       Habitat Alpha  1       150    bateria em 0.0% e geração insuficiente (0.0 de 20.2 kWh) -> módulo ess...
+  4  ALTO       Habitat Alpha  1       149    bateria em 0.0% e geração insuficiente (0.0 de 21.5 kWh) -> módulo ess...
+  5  ALTO       Habitat Alpha  1       148    bateria em 0.0% e geração insuficiente (0.0 de 21.3 kWh) -> módulo ess...
+
+[4] SIMULAÇÃO DAS PRÓXIMAS 24 h (perfil típico de consumo, a partir da carga atual)
+  Cenário     Corte de carga  Carga mín. %  Carga final %  Horas < 20%  Apagão kWh
+  ----------  --------------  ------------  -------------  -----------  ----------
+  Céu limpo   não             3.8           35.8           8            0.0       
+  Céu limpo   sim             13.9          46.4           5            0.0       
+  Tempestade  não             0.0           0.0            21           80.3      
+  Tempestade  sim             6.1           6.1            20           0.0       
+
+[5] REGRESSÃO LINEAR (R² = 0.77): consumo = 8.81 -0.165·T
+    Temperatura noturna média: -59.9 °C -> consumo previsto 18.70 kWh/h
+    Energia útil na bateria (acima do mínimo de 20%): 68.0 kWh -> autonomia de 3.6 h sem sol
+    A geração solar volta a cobrir o consumo em ~9 h
+
+[6] RECOMENDAÇÃO TÉCNICA
+    1. URGENTE: a autonomia (3.6 h) é menor que o tempo até o sol (~9 h). Colocar em economia: BioLab, LogiStore, TerraBot. Na projeção, o corte eleva a carga mínima de 3.8% para 13.9%.
+    2. Se houver tempestade nas próximas 24 h, o corte de carga reduz o apagão em 100%; manter o plano de contingência pronto.
+    3. Inspecionar consumo anômalo (E = 1) em: LogiStore, Reator Solar.
+    4. Longo prazo: ampliar o banco de baterias de 500 para pelo menos 650 kWh (simulação dos 7 dias com corte de carga).
+
+[7] VALIDAÇÃO SOCIOAMBIENTAL DA RECOMENDAÇÃO
+    [OK] Vida em primeiro lugar: módulos essenciais (Habitat Alpha, MedBase, Reator Solar) nunca são cortados.
+    [OK] Transparência: cada decisão mostra as variáveis A, G, E, P que a justificaram.
+    [OK] Humano no controle: o sistema RECOMENDA; o operador confirma o corte.
+    [OK] Critério objetivo e igualitário: o corte segue a prioridade do módulo, não pessoas.
+    [OK] Uso racional de energia: o corte reduz a energia que faltaria em cenário de crise.
+    [ATENÇÃO] Resiliência: a bateria atual cobre a noite sem depender de corte de carga.
+========================================================================
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

@@ -1,0 +1,41 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+--- CIRCUITO LÓGICO ---
+
+   A (bateria < 30%) -----------------------+
+                                            |AND|---+
+   G (geração >= consumo) --|NOT|-- ¬G -----+       |
+                                                    |OR|---+------------> RISCO (alarme)
+   E (consumo excessivo) ---------------------------+      |
+                                                           +--+
+                                                              |AND|-----> CORTE (relé)
+   P (módulo essencial) ----|NOT|-- ¬P -----------------------+
+
+  Portas usadas: 2 NOT, 2 AND, 1 OR.
+  No hardware (ex.: Arduino), A, G e E viriam de sensores (medidor de carga,
+  medidor solar, medidor de corrente do módulo) e P de uma chave de configuração.
+  RISCO acionaria um LED/alarme e CORTE um relé que coloca o módulo em economia.
+
+ A  G  E  P | RISCO CORTE
+--------------------------
+ 0  0  0  0 |   0     0
+ 0  0  0  1 |   0     0
+ 0  0  1  0 |   1     1
+ 0  0  1  1 |   1     0
+ 0  1  0  0 |   0     0
+ 0  1  0  1 |   0     0
+ 0  1  1  0 |   1     1
+ 0  1  1  1 |   1     0
+ 1  0  0  0 |   1     1
+ 1  0  0  1 |   1     0
+ 1  0  1  0 |   1     1
+ 1  0  1  1 |   1     0
+ 1  1  0  0 |   0     0
+ 1  1  0  1 |   0     0
+ 1  1  1  0 |   1     1
+ 1  1  1  1 |   1     0
+
+  [OK] Diagrama do circuito salvo em: circuito_logico.png
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

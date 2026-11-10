@@ -1,0 +1,24 @@
+test_constraints_rejeitam_valores_impossiveis (__main__.TestBancoDeDados.test_constraints_rejeitam_valores_impossiveis) ... ok
+test_exclusao_em_cascata (__main__.TestBancoDeDados.test_exclusao_em_cascata) ... ok
+test_leitura_duplicada_e_rejeitada (__main__.TestBancoDeDados.test_leitura_duplicada_e_rejeitada) ... ok
+test_eficiencia_so_na_carga (__main__.TestBateria.test_eficiencia_so_na_carga) ... ok
+test_limites_fisicos (__main__.TestBateria.test_limites_fisicos) ... ok
+test_base_sem_nulos_e_completa (__main__.TestComDadosReais.test_base_sem_nulos_e_completa) ... ok
+test_carga_sempre_entre_0_e_100 (__main__.TestComDadosReais.test_carga_sempre_entre_0_e_100) ... ok
+test_corte_de_carga_reduz_apagao (__main__.TestComDadosReais.test_corte_de_carga_reduz_apagao) ... ok
+test_deteccao_das_anomalias_injetadas (__main__.TestComDadosReais.test_deteccao_das_anomalias_injetadas) ... ok
+test_integral_simbolica (__main__.TestComDadosReais.test_integral_simbolica) ... ok
+test_modelo_reproduz_carga_registrada (__main__.TestComDadosReais.test_modelo_reproduz_carga_registrada) ... ok
+test_regressao_coerente (__main__.TestComDadosReais.test_regressao_coerente) ... ok
+test_fila_respeita_gravidade_prioridade_e_ciclo (__main__.TestEstruturasDeDados.test_fila_respeita_gravidade_prioridade_e_ciclo) ... ok
+test_media_movel_com_deque (__main__.TestEstruturasDeDados.test_media_movel_com_deque) ... ok
+test_casos_principais (__main__.TestRegraBooleana.test_casos_principais) ... ok
+test_corte_nunca_atinge_modulo_essencial (__main__.TestRegraBooleana.test_corte_nunca_atinge_modulo_essencial) ... ok
+test_modulo_sem_perfil_nao_gera_consumo_excessivo (__main__.TestRegraBooleana.test_modulo_sem_perfil_nao_gera_consumo_excessivo) ... ok
+test_montar_variaveis_limiares (__main__.TestRegraBooleana.test_montar_variaveis_limiares) ... ok
+test_tabela_verdade_tem_16_linhas (__main__.TestRegraBooleana.test_tabela_verdade_tem_16_linhas) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.557s
+
+OK

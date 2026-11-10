@@ -1,0 +1,24 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+========================================================================
+ SIFSM - Aurora Siger | Gestão Energética Sustentável em Marte
+========================================================================
+ CADASTRO E CONSULTA (CRUD)
+   1. Cadastrar módulo
+   2. Listar módulos
+   3. Alterar módulo
+   4. Excluir módulo
+   5. Registrar leitura de sensores
+   6. Consultar leituras
+ DECISÃO E ANÁLISE
+   7. Regra booleana (risco e corte de carga)
+   8. Circuito lógico
+   9. Fila de prioridade de alertas
+  10. Simulação computacional da bateria
+  11. Modelo linear (consumo x temperatura)
+  12. Analisar sustentabilidade da colônia
+  13. Análise final e limitações
+ SISTEMA
+  14. Recriar base de dados simulada
+   0. Sair
+Escolha uma opção: Encerrando o SIFSM. Até logo!

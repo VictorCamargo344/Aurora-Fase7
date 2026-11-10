@@ -1,0 +1,34 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+--- FILA DE PRIORIDADE DE ALERTAS (heapq) ---
+  Regra aplicada a 168 ciclos: 188 situações de risco; 188 alertas pendentes no banco (os já resolvidos não voltam).
+  Pendentes: 188  (crítico: 5 | alto: 163 | moderado: 20)
+
+  Próximos alertas na fila (mais urgente primeiro):
+  #  Gravidade  Módulo         Prior.  Ciclo  Mensagem                                                                 
+  -  ---------  -------------  ------  -----  -------------------------------------------------------------------------
+  1  CRÍTICO    Habitat Alpha  1       137    bateria em 3.3% e geração insuficiente (9.8 de 13.1 kWh); consumo 2.86...
+  2  CRÍTICO    Habitat Alpha  1       136    bateria em 3.9% e geração insuficiente (13.9 de 13.9 kWh); consumo 3.1...
+  3  CRÍTICO    LogiStore      4       125    bateria em 6.1% e geração insuficiente (0.0 de 23.2 kWh); consumo 4.81...
+  4  CRÍTICO    LogiStore      4       124    bateria em 10.7% e geração insuficiente (0.0 de 23.6 kWh); consumo 5.0...
+  5  CRÍTICO    LogiStore      4       123    bateria em 15.5% e geração insuficiente (0.0 de 21.7 kWh); consumo 4.4...
+
+  1. Atender (resolver) o alerta mais urgente   2. Ver os 15 primeiros   0. Voltar
+Escolha: 
+  [OK] Alerta 91 (Habitat Alpha, ciclo 137) marcado como resolvido.
+  Mensagem: bateria em 3.3% e geração insuficiente (9.8 de 13.1 kWh); consumo 2.86 kWh acima de 140% do esperado (2.04 kWh) -> módulo essencial mantido ligado
+  Restam 187 alertas pendentes.
+
+  Próximos alertas na fila (mais urgente primeiro):
+  #  Gravidade  Módulo         Prior.  Ciclo  Mensagem                                                                 
+  -  ---------  -------------  ------  -----  -------------------------------------------------------------------------
+  1  CRÍTICO    Habitat Alpha  1       136    bateria em 3.9% e geração insuficiente (13.9 de 13.9 kWh); consumo 3.1...
+  2  CRÍTICO    LogiStore      4       125    bateria em 6.1% e geração insuficiente (0.0 de 23.2 kWh); consumo 4.81...
+  3  CRÍTICO    LogiStore      4       124    bateria em 10.7% e geração insuficiente (0.0 de 23.6 kWh); consumo 5.0...
+  4  CRÍTICO    LogiStore      4       123    bateria em 15.5% e geração insuficiente (0.0 de 21.7 kWh); consumo 4.4...
+  5  ALTO       Habitat Alpha  1       152    bateria em 0.0% e geração insuficiente (14.3 de 17.3 kWh) -> módulo es...
+
+  1. Atender (resolver) o alerta mais urgente   2. Ver os 15 primeiros   0. Voltar
+Escolha: 
+Escolha uma opção: Encerrando o SIFSM. Até logo!

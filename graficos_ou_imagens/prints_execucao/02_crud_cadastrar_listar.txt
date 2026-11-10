@@ -1,0 +1,35 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+--- CADASTRAR MÓDULO ---
+Nome do módulo: Tipo do módulo:
+   1. habitacao
+   2. medico
+   3. energia
+   4. laboratorio
+   5. armazenagem
+   6. mineracao
+   7. agricultura
+   8. outro
+  Escolha o número: Código do sensor (ex.: 0x4A1B, Enter para deixar vazio): Prioridade (1 = mais essencial ... 5 = menos essencial): Status:
+   1. ativo
+   2. manutencao
+   3. alerta
+  Escolha o número: Consumo base (kWh/dia): 
+  [OK] Módulo 'Estufa Verde' cadastrado com ID 7.
+
+Escolha uma opção: 
+--- MÓDULOS DA COLÔNIA ---
+  ID  Nome           Tipo         Sensor  Prior.  Status      Base kWh/dia  Leituras  Média kWh/h
+  --  -------------  -----------  ------  ------  ----------  ------------  --------  -----------
+  1   Habitat Alpha  habitacao    0x1A2F  1       ativo       45.0          168       3.05       
+  2   MedBase        medico       0x1B3C  2       ativo       38.0          168       2.75       
+  3   Reator Solar   energia      0x2C4D  2       ativo       20.0          168       2.01       
+  4   BioLab         laboratorio  0x2D5E  3       ativo       30.0          168       2.53       
+  5   LogiStore      armazenagem  0x3E6F  4       ativo       25.0          168       2.25       
+  6   TerraBot       mineracao    0x3F7A  5       manutencao  55.0          168       3.83       
+  7   Estufa Verde   agricultura  0x5B2C  3       ativo       28.5          0         -          
+
+  Total: 7 módulos. Prioridade <= 2 = módulo essencial.
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

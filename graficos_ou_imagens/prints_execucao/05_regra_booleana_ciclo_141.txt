@@ -1,0 +1,27 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+--- REGRA BOOLEANA DE DECISÃO ---
+  RISCO = (A AND NOT G) OR E        CORTE = RISCO AND NOT P
+  A = bateria < 30%   G = geração >= consumo da colônia
+  E = consumo do módulo > 140% do esperado   P = módulo essencial (prioridade <= 2)
+
+  1. Avaliar um ciclo registrado no banco
+  2. Testar a regra informando A, G, E e P manualmente
+  3. Exibir a tabela-verdade
+Escolha:   Dica: o ciclo 141 (dia 6, 20h) está no meio da tempestade de poeira.
+Ciclo (1 a 168): 
+  Ciclo 141 (dia 6, 20h) | bateria 0.0% | geração 0.0 kWh x consumo 15.6 kWh
+  Módulo         Consumo  Esperado  A  G  E  P  RISCO  CORTE
+  -------------  -------  --------  -  -  -  -  -----  -----
+  Habitat Alpha  3.04     3.21      1  0  0  1  SIM    não  
+  MedBase        2.64     3.04      1  0  0  1  SIM    não  
+  Reator Solar   1.85     1.97      1  0  0  1  SIM    não  
+  BioLab         2.53     2.53      1  0  0  0  SIM    SIM  
+  LogiStore      1.94     2.24      1  0  0  0  SIM    SIM  
+  TerraBot       3.58     3.95      1  0  0  0  SIM    SIM  
+
+  DECISÃO: colocar em modo de economia -> BioLab, LogiStore, TerraBot
+  Em risco, mas essenciais (mantidos ligados e sinalizados) -> Habitat Alpha, MedBase, Reator Solar
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

@@ -1,0 +1,36 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção:   [ERRO] 'abc' não é um valor inteiro válido.
+Escolha uma opção:   [ERRO] O valor deve ser menor ou igual a 14.
+Escolha uma opção: 
+--- CADASTRAR MÓDULO ---
+Nome do módulo:   [ERRO] Este campo é obrigatório.
+Nome do módulo: Tipo do módulo:
+   1. habitacao
+   2. medico
+   3. energia
+   4. laboratorio
+   5. armazenagem
+   6. mineracao
+   7. agricultura
+   8. outro
+  Escolha o número:   [ERRO] O valor deve ser menor ou igual a 8.
+  Escolha o número: Código do sensor (ex.: 0x4A1B, Enter para deixar vazio):   [ERRO] Use o formato hexadecimal 0x seguido de 4 dígitos (ex.: 0x4A1B).
+Código do sensor (ex.: 0x4A1B, Enter para deixar vazio): Prioridade (1 = mais essencial ... 5 = menos essencial):   [ERRO] 'dez' não é um valor inteiro válido.
+Prioridade (1 = mais essencial ... 5 = menos essencial): Status:
+   1. ativo
+   2. manutencao
+   3. alerta
+  Escolha o número: Consumo base (kWh/dia):   [ERRO] O valor deve ser maior ou igual a 0.1.
+Consumo base (kWh/dia): 
+  [ERRO] Já existe um módulo com esse nome ou código de sensor.
+
+Escolha uma opção: 
+--- EXCLUIR MÓDULO ---
+  Módulos: 1=Habitat Alpha, 2=MedBase, 3=Reator Solar, 4=BioLab, 5=LogiStore, 6=TerraBot
+Informe o ID do módulo:   [ERRO] Não existe módulo com ID 42.
+Informe o ID do módulo:   Atenção: as 168 leituras, os alertas e as manutenções deste módulo também serão excluídos.
+  Confirma a exclusão de 'Habitat Alpha'? (s/n):   [ERRO] Responda apenas 's' ou 'n'.
+  Confirma a exclusão de 'Habitat Alpha'? (s/n):   Exclusão cancelada.
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

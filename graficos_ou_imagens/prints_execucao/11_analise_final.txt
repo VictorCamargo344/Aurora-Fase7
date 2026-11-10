@@ -1,0 +1,44 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+========================================================================
+ ANÁLISE FINAL DOS RESULTADOS E LIMITAÇÕES
+========================================================================
+
+  Base: 6 módulos, 1008 leituras, 7 dias.
+  Balanço diário (consumo x geração) e carga mínima da bateria:
+    Dia 1: consumo  392.7 | geração  417.8 kWh (106% coberto) | bateria mínima  39.7%
+    Dia 2: consumo  393.4 | geração  423.8 kWh (108% coberto) | bateria mínima  42.2%
+    Dia 3: consumo  392.9 | geração  416.9 kWh (106% coberto) | bateria mínima  45.6%
+    Dia 4: consumo  382.9 | geração  413.3 kWh (108% coberto) | bateria mínima  48.2%
+    Dia 5: consumo  401.3 | geração  145.6 kWh ( 36% coberto) | bateria mínima  27.7%
+    Dia 6: consumo  412.0 | geração  147.3 kWh ( 36% coberto) | bateria mínima   0.0%
+    Dia 7: consumo  385.4 | geração  418.5 kWh (109% coberto) | bateria mínima   0.0%
+
+  Regra booleana: 188 situações de risco na semana (95 com corte recomendado). Alertas no banco: 188 (1 resolvidos).
+  Modelo linear: consumo = 8.81 -0.165·T | R² teste = 0.77 | MAE = 1.56 kWh/h
+  Simulação: apagão de 276.5 kWh sem corte x 88.7 kWh com corte de carga.
+
+  Conclusão: em dias de céu limpo a colônia é autossuficiente (geração > consumo),
+  mas a bateria atual não atravessa uma tempestade de poeira de 2 dias. A regra booleana
+  e o corte de carga reduzem o déficit, protegendo os módulos essenciais, porém a
+  solução definitiva exige ampliar o armazenamento de energia.
+
+  LIMITAÇÕES:
+    - Os dados são simulados (7 dias); valores reais de Marte exigiriam calibração com sensores.
+    - O modelo linear usa só a temperatura; luminosidade e tempestades também afetam o consumo.
+    - A bateria é modelada com eficiência constante, sem degradação, autodescarga ou efeito do frio.
+    - O consumo esperado (perfil horário) vem dos próprios dados; um módulo novo ainda não tem perfil.
+    - A regra booleana usa limiares fixos (30%, 140%); o ideal seria ajustá-los com histórico real.
+    - O critério E ainda gera alguns falsos alarmes (17 em 1008 leituras) por causa do ruído dos sensores.
+    - O corte de carga é instantâneo e fixo em 30% do consumo; na prática há tempos de religamento.
+    - Banco local (SQLite) com um único usuário; não há autenticação nem registro de quem alterou dados.
+
+  MELHORIAS FUTURAS:
+    - Regressão múltipla (temperatura + luminosidade + hora) ou modelos não lineares.
+    - Agente de IA que monitora a fila de alertas e propõe ações, com guardrails e aprovação humana.
+    - Integração com sensores reais (Arduino/ESP32) enviando leituras para o banco.
+    - Previsão de tempestades a partir de dados meteorológicos para antecipar o corte de carga.
+    - Painel gráfico (dashboard) e histórico de decisões para auditoria.
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

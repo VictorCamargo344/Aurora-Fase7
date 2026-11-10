@@ -1,0 +1,22 @@
+Bem-vindo ao SIFSM - Sistema Integrado de Futuro Sustentável em Marte.
+
+Escolha uma opção: 
+--- MODELO LINEAR SIMPLES: CONSUMO x TEMPERATURA ---
+  Dados: 168 ciclos (117 para treino, 51 para teste)
+  Correlação de Pearson (temperatura x consumo): r = -0.900
+
+  Equação: consumo (kWh/h) = 8.814 + (-0.1650) x temperatura (°C)
+  Interpretação: a cada 1 °C a menos, a colônia consome 0.165 kWh a mais por hora
+                 (aquecimento); em 10 °C de queda são 1.65 kWh/h a mais.
+
+  R² no treino = 0.824 | R² no teste = 0.768
+  Erro médio absoluto (MAE) = 1.56 kWh/h | RMSE = 1.82 kWh/h
+  Gráfico salvo em: graficos_ou_imagens\regressao_consumo_temperatura.png
+
+  Previsão de apoio à decisão (autonomia noturna da bateria):
+  Temperatura prevista para a noite (°C) [-68.0]:   Carga atual da bateria (%) [33.6]: 
+  Consumo previsto a -68.0 °C: 20.03 kWh/h
+  Energia disponível acima do mínimo de 20%: 68.0 kWh
+  Autonomia estimada sem geração solar: 3.4 horas
+
+Escolha uma opção: Encerrando o SIFSM. Até logo!

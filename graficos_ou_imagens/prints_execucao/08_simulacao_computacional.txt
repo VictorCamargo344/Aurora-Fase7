@@ -1,0 +1,30 @@
+=== SIMULAÇÃO COMPUTACIONAL DO BANCO DE BATERIAS ===
+Bateria: Banco Principal LiFePO4 | capacidade 500 kWh | carga inicial 70% | mínimo 20% | eficiência 95%
+Modelo: carga(t+1) = carga(t) + saldo(t) (x eficiência ao carregar), limitada a [0, capacidade]
+
+Validação: diferença máxima entre o modelo e a carga registrada no banco = 0.0000 p.p.
+
+[1] Cenários determinísticos (7 dias)
+Cenário                          Mín.(%) Final(%)  h<20% Apagão(kWh) Economia(kWh)
+Registrado (sem corte)               0.0     33.6     34       276.5           0.0
+Registrado + corte de carga          0.0     34.5     32        88.7         206.6
+Tempestade severa (sem corte)        0.0      0.0     50       552.8           0.0
+Tempestade severa + corte            0.0      0.0     48       246.9         320.0
+O corte de carga reduziu a energia não atendida em 68%.
+Dimensionamento: capacidade mínima para atravessar a semana sem apagão = 900 kWh sem corte | 650 kWh com corte (atual: 500 kWh)
+
+[2] Integral da curva solar (SymPy)
+Potência solar: P(t) = P_p*sin(pi*(t/12 - 1/2))  (6 h <= t <= 18 h)
+Integral de 6 a 18: E = 24*P_p/pi
+Pico estimado nos dados (12 h): Pp = 55.01 kWh
+Energia teórica = 420.2 kWh/dia | soma das leituras = 418.1 kWh/dia (diferença 0.5%)
+Consumo médio da colônia = 394.4 kWh/dia -> pico mínimo para autossuficiência: Pp >= 51.6 kWh (resolvendo 24·Pp/π = consumo)
+
+[3] Monte Carlo (500 tempestades sorteadas)
+Sem corte de carga   P(carga < mínimo) =  92.8% | P(apagão) =  81.8% | carga mínima média =   3.4% | pior 5% =   0.0%
+Com corte de carga   P(carga < mínimo) =  88.6% | P(apagão) =  57.6% | carga mínima média =   6.6% | pior 5% =   0.0%
+
+Gráficos salvos em:
+  - graficos_ou_imagens\simulacao_cenarios_bateria.png
+  - graficos_ou_imagens\simulacao_monte_carlo.png
+  - graficos_ou_imagens\simulacao_curva_solar_integral.png
